@@ -1,25 +1,15 @@
-import styled, { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 import { defaultTheme } from './styles/themes/default'
+import { GlobalStyle } from './styles/global';
+import { Page } from './page';
 
 
-export const Title = styled.h1`
-  color: ${(props) => props.theme['gray-700']};
-`;
-
-function App() {
-
-
+export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-
-      <div>
-        <Title>olá</Title>
-      </div>
-
+      <GlobalStyle />
+      <Page />
       </ThemeProvider>
-    
-
   )
 }
 
-export default App
